@@ -1,0 +1,26 @@
+project:
+  name: "PAN HR Analytics"
+  version: "1.0.0"
+  description: "Career Progression & Promotion Gap Analysis"
+
+data:
+  raw_path: "data/pan_employees.csv"
+  processed_path: "data/processed.csv"
+  target_col: "Attrition"
+
+clustering:
+  n_clusters: 5
+  random_state: 42
+  n_init: 10
+  pca_components: 2
+
+risk_engine:
+  promo_weight: 0.30
+  retention_weight: 0.40
+  stagnation_weight: 0.30
+  low_risk_threshold: 33
+  high_risk_threshold: 66
+
+streamlit:
+  port: 8501
+  theme: dark
